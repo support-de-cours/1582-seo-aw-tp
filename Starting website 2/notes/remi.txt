@@ -1,0 +1,242 @@
+                                =========================
+                                ||     index.html      ||
+                                =========================
+
+1.  On commence par spécifier la langue comme "Default". C'est une erreur car cela
+    ne devrait être utilisé que dans des conditions où les préférences de langage
+    de l'utilisateur ne peuvent être établies (réference: documentation VSCode 
+
+       "7.  The grandfathered tag "i-default" (Default Language) was
+       originally registered according to [RFC1766] to meet the needs of
+       [RFC2277].  It is not used to indicate a specific language, but
+       rather to identify the condition or content used where the
+       language preferences of the user cannot be established.  It
+       SHOULD NOT be used except as a means of labeling the default
+       content for applications or protocols that require default
+       language content to be labeled with that specific tag.  It MAY
+       also be used by an application or protocol to identify when the
+       default language content is being returned.*"
+       )
+
+       A noter que la page est écrite en français donc parfaitement identifiable
+       comme "fr". De plus, le meta charset de la ligne suivante est spécifié comme
+       UTF-8 tandis que pour l'Europe de l'ouest ça devrait être iso-8859-1 afin de 
+       prendre en compte les accents et les apostrophes, spécifiées en codes dans
+       la page nuisant à l'accessibilité des synthétiseurs vocaux.
+
+2.  Présence de commentaires dans le code d'un site en production.
+
+3.  Mauvais emploi des mots de passe (ligne 5): Seul "agence design Paris" est pertinent, 
+    qui serait par aillerus plus efficace coupé en 3 mots: "agence, design, Paris".
+    On peut donc également conclure qu'il n'ya pas assez de mots clés.
+
+4.  Attribut "content" de la balise "meta" (ligne 8) est vide, ce qui implique 
+    (en plus du mauvais réferencement) que la page apparaîtra peu (voire pas)
+    dans les recherches des utilisateurs.
+
+{   
+    Pas une erreur  Attribut "content" de la balise "meta name="viewport"", utilisation de la valeur
+    obsolète viewport-fit=cover" initialement prévue pour le reponsive de l'iOS Safari,
+    abandonné en 2019 (source, stack overflow: https://stackoverflow.com/questions/60154236/is-viewport-fit-cover-no-longer-working-on-the-ios-safari)
+}
+5.  Incohérence dans la définition de la valeur de l'attribut "type" (ligne 10) de la balise
+    "link" spécifiant une image au format "png" tandis que l'url de l'image indique 
+    que l'image est au format jpg (l'image est bien au format "png").
+    De plus, l'image est bien trop grande (533x533) et bien trop lourde (35,6 ko)
+    pour un "favicon". La taille de l'icône devrait être un multiple d'un carré de 48 pixels
+    et idéalement au format "svg" afin d'être redimensionnable facilement par le
+    moteur de recherche (source: https://developers.google.com/search/docs/advanced/appearance/favicon-in-search?hl=fr )
+
+6.  Le fichier "style.css" n'est pas rangé au bon endroit. Il devrait se trouver dans
+    dossier "CSS" et donc le chemin relatif de son appel devrait être "href="./css/style.css"".
+    Par ailleurs, ce fichier précis étant celui créé par le développeur, il devrait être placé
+    en dernier afin qu'il écrase les précédents.
+
+7.  Tous les appels de script js, jquery, etc. (ligne 18 à 22) se font au mauvais endroit.
+    Ils devraient être appelés juste avant la fermeture de la balise "body".
+    Même s'il est possible de mettre des scripts dans la balise "head", mais en l'occurence
+    pas des appels de librairies telles que Bootstrap ou jQuery.
+    Par contre, la balise "script src="./js/jquery.touchSwipe.js"" ligne 21 possède l'attribut
+    "defer". Après quelques recherches, il semble que ce fichier gère du responsive, cela
+    ferait donc sens de l'appeler ainsi pour pouvoir l'executer avant l'execution du DOM.
+    D'autre part, le fichier "gmaps.js" n'a aucune raison d'être présent dans le projet car
+    la fonctionalité à laquelle il se réfère est censée être prise en charge par Google.
+
+8.  La balise "title" (ligne 24) ne contient qu'un point. Le titre de l'onglet n'est donc 
+    qu'un point, ainsi que le référencement Google.
+
+9.  Utilisation d'une section "Analytics" (ligne 29 à 31) en commentaire ne contenant rien.
+
+10. Aucun impact sur le référencement, mais on peut noter (ligne 34) une mauvaise indentation du code.
+
+11. Balise "body" provoquant un débordement notifié dans la console.
+
+12. On remarque à l'ouverture du body (ligne 35) l'absence de balise "header" malgré
+    la présence d'éléments "header" en valeur d'attributs.
+
+13. "div class="page-container"" (ligne 36) provoquant un débordement notifié dans la console.
+
+14. "div id="bloc-0"" (ligne 38) provoquant un débordement notifié dans la console.
+
+15. Ajout de mots-clés dans une div (ligne 44) invisible (pas de hauteur et couleur blanche). 
+    Pratique absolument redhibitoire et dépréciée par les scrapers des moteurs de recherche.
+
+16. Attribut "alt" de la balise "image" (ligne 45) contient une allitération de mots-clés
+    tandis que cette balise est prévue pour être lue par les synthétiseurs vocaux.
+
+17. Le logo de cette même balise image (ligne 45) possède une hauter définie dans le code
+    HTML au lieu de figurer dans le fichier css dédié.
+
+18. Itération (ligne 46) de la ligne 44 (problème n°11) et donc comportant les mêmes erreurs.
+
+19. Dans la balise "button" ligne 48, erreur de css impliquant l'apparition du texte en page 2
+    supposé rester caché (Toggle navigation). Par ailleurs, itération inutile de la classe
+    "navbar-toggle".
+
+20. Utilisation inutile et sans effet de balises "span class="icon bar"" (ligne 48)
+
+21. Element de liste (ligne 56) vide
+
+22. Utilisation du code &gt; (ligne 59) pour dessiner une sorte de flèche. Posera problème lors
+    de la ecture par un synthétiseur vocal.
+    Aussi, la div provoque un débordement notifié dans la console.
+
+23. Erreur de saisie de classe bootstrap (ligne 69) "bloc bgc-dark-slate-blue". "bgc n'existe pas 
+    et n'est pas appelé sous cette dénomination en css.
+
+24. Une nouvelle fois un taille d'image est spécifiée à l'aide d'un attribut "width" dans La
+    balise "img" ligne 73. Aussi, attribut "alt" non approprié.
+
+25. Utilisation d'une balise "a" (ligne 78) pour un bouton à la place d'un "input" ou d'un "button".
+    Par ailleurs il est à noter que ce bouton menant vers un formulaire de contact est mal placé.
+    le footer serait un emplacement plus approprié.
+
+26. "div class="bloc bgc-white l-bloc"" (ligne 87) provoquant un débordement notifié dans la console.
+
+27. Utilisation d'une image (ligne 91) pour une description de l'agence qui devrait en toute logique
+    être un texte balisé d'un "h2". A noter: la taille de l'image 11,9 ko) bien que trop petite,
+    ajoutant un flou de grossissement désagréable.
+    De plus, récurence de l'erreur su l'attribut "alt" qui sert de
+    fourre-tout pour mots-clés dégradant l"efficacité des synthétiseurs vocaux.
+
+28. Utilisation hasardeuse d'icônes (lignes 97, 108 et 119) qui a nécessité l'import d'une librairie
+    complète (et-line) pour seulement 3 icônes, entourées de balises "span" non appropriées.
+
+29. Titres de description des icônes sus-nommées (lignes 100, 111 et 122) balisés par des
+    "H3" alors qu'aucun "h2" n'a été utilisé jusqu'alors.
+
+30. Utilisation d'encodages pour des "guillemets-apostrophes" (ligne 103), réduisant l'efficacité
+    des synthétiseurs vocaux.
+
+31. Utilisation d'un retour à la ligne "<br>" inutile (ligne 114).
+
+32. Utilisation d'une image pour une citation (ligne 131) qui devrait à nouveau être
+    un texte balisé d'un "h2". Encore une fois, image floue et lourde (27,8 ko)
+    et comportant une allitération de mots-clés dans l'attribut "alt".
+
+33. Div à la ligne 140 contenant un bloc (bloc-3-what-I-do) provquant un débordement
+    notifié dans la console.
+
+34. Utilisation de balises "h2" (ligne 144) pour saisir un texte, qui malgré son importance
+    serait plus approprié entre des balises "p" et "strong". A noter une petite faute
+    d'orthographe, lyonnaise dans ce contexte de prend pas de majuscule ainsi qu'un
+    nouveau saut de ligne "br" qui devrait être géré à l'aide d'un margin en css 
+
+35. Fautes d'orthographes dans le paragraphe (ligne 170) "des entreprises localeS", 
+    "créer des sites beauX". Utilisation de 2 sauts de lignes "br" suivi d'une balise "a",
+    le tout sur une seule ligne (de 535 colonnes) menant au formulaire de contact suivi
+    d'un énième saut de ligne "br"
+
+36. "div id="bloc-4-portfolio" (ligne 157) provoquant un débordement notifié dans la console.
+
+37. Utilisation d'une image (ligne 161) à la place d'un "h2", floue et lourde (7,79 ko), 
+    avec une allitération de mots-clés dans l'attribut "alt".
+    De plus, une image utilisée en back-ground qui aurait dû tapisser toute la page
+    entre le bloc saumon et le footer.
+
+38. Suspicion d'erreur sur l'utilisation des lightboxes (lignes 166, 175, 186 et 195), 
+    valeur "#" de l'attribut "href" est habituellement utilisée comme témoin d'un exemple,
+    et ne mène vers rien? Je ne comprends pas l'utilisation ici et ne trouve pas de docs
+    claires concernant les bonnes partiques avec jquery. Mais la meilleur pratique que j'aie
+    trouvé ne se sert que d'une balise "img" classique couplée avec un écouteur d'évènement
+    en jQuery (source https://lesdocs.fr/lightbox-simple-avec-jquery/)  .
+
+39. Titre des description des lightboxes sus-nommées (lignes 168) balisées en "h3", pratique inapropriée.
+
+40. "div id="bloc-5-cta"" provoquant un débordement notifié dans la console.
+
+41. Utilisation d'un saut de ligne "br" (ligne 213) inaproprié. Devrait être géré en CSS
+    avec une taille de container (ou à l'aide de Bootstrap)
+
+42. Abus de lien vers formulaire de contact. Troisième apparition (ligne 216)
+
+43. Utilisation inutile d'un saut de ligne "br" (ligne 229)
+
+44. Utilisation de 4 icônes "font-awesome" (lignes 234, 239, 244, 249) impliquant le 
+    téléchargement de la totalité de la bibliothèque dans le dossier "fonts".
+    L'utilisation du cdn ou le tri de ce qui est strictement nécessaire aurait été
+    plus aproprié.
+
+45. "div id="bloc-8"" incarne le début du footer sans emploi de la balise "footer".
+    Incohérence de passer du bloc 5 au bloc 8 (même si ça ne constitue pas une erreur).
+    Div provoquant un débordement notifié dans la console.
+
+46. Présence d'une nouvelle div invisible (ligne 252) (même couleur d'arrière-plan que le conteneur) 
+    contenant une allitération de mots-clés directement écrits dans la div (ghost-texting).
+
+47. Titres de div (lignes 256, 265 et 279 ) saisies en brut, non inclus dans dans 
+    une balise.
+
+48. Liste de partenaires et d'annuaires dans le footer sans aucun rapport avec le
+    web design, justifiant une nouvelle page. Par ailleurs, aucun lien ne fonctionne
+    suite à une erreur d'URL (manque "www." et/ou "http(s):" ).
+
+                                =========================
+                                ||     page2.html      ||
+                                =========================
+
+49. Erreur de définition de langue et d'encodage (cf erreur n°1 d'index.tml)
+
+50. La valeur de l'attribut "content" de la la balise "meta name="keywords"" 
+    est vide (ligne 5)
+
+51. La valeur de l'attribut "content" de la la balise "meta name="description"" 
+    est vide (ligne 6)
+
+52. Erreur de définition d'attributs du favicon (ligne 8) (cf erreur n°5 d'index.html)
+
+53. Erreur dans l'arborescence et donc dans l'appel du fichier "style.css" (ligne 11)
+    (cf erreur n°6 d'index.html)
+
+54. Erreur d'emplacement des balises "scripts" (lignes 18 à 22) (cf erreur n°7 d'index.html)
+
+55. Section de commentaire vide (lignes 26 à 28) (cf erreur n°9 d'index.html)
+
+56. Balise "body" provoquant un débordement notifié dans la console
+
+57. Pas de balise "header" (ligne 33)
+
+58. Comme décrit dans le correctif d'index.html, le bouton du "menu burger" 
+    laisse maintenant apparaître son contenu "Toggle navigation".
+    Si le bouton est bien caché sur la page 1 et pas sur la page 2 c'est que 
+    malgré l'"overflow: hidden" dans le fichier "bootstrap.css" s'appliquant 
+    sur la classe "sr-only", le lien n'est pas le bon sur la page2 puisqu'il
+    pointe vers un lien bootstrap minifié non importé dans le projet.
+
+59. "div id="bloc-6" provoquant un débordement notifié dans la console.
+
+                                ========================
+                                ||     style.css      ||
+                                ========================
+
+
+
+
+
+
+
+ 
+
+    
+    
+

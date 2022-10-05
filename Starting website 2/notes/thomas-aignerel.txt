@@ -1,0 +1,18 @@
+Le titre est incorrect. Il doit contenir le titre de la page.
+Bootstrap dans " page2 " est rattaché au fichier Bootstrap.min alors qu'il n'y a pas de fichier minifié.
+La balise meta-description est vide du coup google pourra pas le référencer.
+La balise Keywords est inutile.
+La balise langue "defaut" est incorrect.
+Les balises META sont mal utilisé. 
+Les scripts à mettre en bas de page. La bonne pratique est d’utiliser systématiquement le tag defer ou async ainsi que de placer le script en bas de page.
+Mauvaise pratique SEO, mettre des mots en blanc sur fond blanc pour augmenté le réferencement. GOOGLE pourrait le considerer comme du hack. A Supprimer.
+Les images sont bien trop lourd ! Il faut les compressers ! 
+Problème de contraste pour les mal voyant / daltonien.
+Problème de sémentique dans le HTML
+Les tags alt des images.
+Enlever la plus part des "!important"
+Crée un sitemap ! 
+Nommée correctement les pages
+Description ajouté dans les balises <a>
+Bootstrap pas à jour
+Retirer les sponsors du footer pour les mettre autre part

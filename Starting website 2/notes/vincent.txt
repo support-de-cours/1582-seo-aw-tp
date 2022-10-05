@@ -1,0 +1,88 @@
+index:
+dans le header :
+-la langue sur default,
+-la balise link avec une image 
+-les balises "scripts"
+-Pas de titre 
+/fin header 
+
+main de l'index:
+bloc0:
+
+-pas de balise "main"
+-ligne 35 , la classe "bgc"
+-ligne 44 , 3balises "span" vide
+-ligne 52, balise "li" vide .
+
+bloc1:
+-ligne 65, class "bgc" dans la premiere div 
+-ligne 70,le h1 en 3lignes
+
+bloc 2:
+-ligne 83, class"bgc"
+-les div et les p ont la meme class "text-center"
+
+bloc 3:
+-class bgc
+-class tc-white
+
+bloc 4:
+-class bgc
+-text-center sur div,h3 et p
+
+bloc 5:
+-class bgc
+-ligne 208 , pas de "col" dans le h2
+-class "tc"
+
+/fin main
+
+
+Footer:
+bloc 6:
+-class bgc
+-class "d-bloc"
+.
+
+
+
+
+PAGE 2:
+Head:
+-langue sur defaut
+-pasde content dans la meta keyword
+-pas de donner dans la meta description
+-le link de l'image png
+-les balises scripts
+.
+
+main:
+-pas de balise main content 
+
+bloc0:
+-bgc class
+-ligne 40 ,3 span
+-ligne 48, "li" vide
+
+-passage du bloc 0 a 6 dans les commentaire mauvaise annotation
+
+bloc1:
+-class bgc 
+-class tc
+-text-center sur h1 et p
+
+bloc2:
+-Bloc 7 dans les commentaire , mauvaise annotation
+-class bgc
+-lign 88 , pas de type a l'input
+-ligne 94 et 100 les input ont tous 2 un type "email"
+/fin main
+
+Footer:
+-class bgc 
+-d-bloc
+-ligne 133 un br inutile
+.
+
+
+

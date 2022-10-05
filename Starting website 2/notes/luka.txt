@@ -1,0 +1,98 @@
+ Légende
+
+    * = Régler
+
+    -* = Pas encore Régler
+
+    -- = Attendre que tout soit fini
+
+----{HEAD Page Index.HTML}----
+
+ Le titre de la page ne contient rien ( sauf un .) {Erreur critique} *
+
+ Page Css n'ont mise dans le dossier CSS {Erreur d'architecture} *
+
+ Des mot-clé dupliquer inutile {Erreur} *
+
+ La description est vide {Erreur Critique} *
+
+ Le Favicon n'est pas dans le dossier image {Recommandé} *
+
+ La balise pour le favicon contient de mauvais attribut, il est déclaré que l'image est un Png hors c'est un jpg {erreur Critique} *
+
+ Les balises des modules JS ne sont pas au bon endroit ils devraient être dans le body et non pas dans le Head {Erreur pouvant entraîner des problèmes lors du chargement de la page} *
+
+ Les Web App Apple ne sont pas présentes {Recommandé} -*
+
+ La balise
+
+ N'est pas présente {Recommandé} *
+
+ Canonial n'est pas utilisé { Erreur Pouvant dégrader la note SEO } *
+
+ l'attribut lang est mal attribuer {Erreur Critique} *
+
+ l'attribut dir dans le head n'est pas mise {Erreur Pouvant dégrader la note SEO} *
+
+ Link Alternate non définit {Recommandé} -*
+
+ Css non minifier {Erreur Pouvant dégrader la note SEO} --
+
+ Les Balises Header/Footer/Section/Main Ne sont pas mise (Erreur de Semantic Critique) *
+
+ Page Error 404 page et les 5xx ne sont pas créer {Erreur Critique} - -
+
+ N'est pas Clean {Recommandé}
+
+ W3C Error + Warning *
+
+----{Body/Footer Page Index.HTML}----
+
+ Deux barres au niveau du logo / Enlever les barre
+
+ Dans le header Page2 ne devrais pas se nommer comme ça / Remplacer Page2 par Contact
+
+ Le texte l'agence La Panthère est une agence web... en image / Enlever l'image et le mettre en Texte
+
+ Texte l'agence La Panthère est une excellent agence web... en image / Enlever l'image et mettre le texte.
+
+ Texte nous souhaitons aider les entreprise... est en transparent / Mettre le texte en blanc
+
+ Texte nous travaillons avec beaucoup... est une image / Le remettre en texte
+
+ Footer La liste des Partenaires et les annuaires ne sont pas aligné avec leur titre / Aligné les liste avec leur titre
+
+ Lors de la version mobile Partenaires Annuaires ne sont plus aligné / Aligné pour que cela reste dans le même ordre que le reste des resolution
+
+ De même pour les logo
+
+----{HEAD Page page2.HTML}----
+
+ Les déclarions des module JS sont dans le header alors qu'il devrait être à la fin du body / Mise des déclarions des module JS à la fin du body *
+
+ La balise pour le favicon avais l'attribut ' type="image/png" ' alors que l'image est un jpg / Modification de l'attribut en ' type="image/jpg" ' *
+
+ Le Titre de la page n'est pas très bien définit / Remplacement de page2 par Contact *
+
+ La desc est vide / Remplisage de la description avec " Vous pouvez nous contacter sur cette page " *
+
+ Link vers le fichier style.css mal hiérarchiser / Changement d'ordre de chargement des fichier css Style.css a étais mit en dernier *
+
+ l'attribut lang est mal attribuer *
+
+  W3C Error + Warning *
+
+----{BODY Page page2.HTML}----
+
+ Les éléments du header sont mal placé / Duplication du header sur la page d'accueille pour la mettre dans cette page *
+
+ Texte " Parlons web design ! " En transparent / Mise du texte en blanc pour qu'on puisse le voire *
+
+ Les informations de contact sont mal placé et pas assez gros / Les Remplacer + les Agrandir *
+
+ Footer qui n'est pas aussi remplis que celui de l'accueille / Rajout du contenu manquant *
+
+ En mode Mobile les Logo sociaux ne sont pas bien mit / Replacage des logo en mode mobile *
+
+ Les Balises Header/Footer/Section/Main Ne sont pas mises *
+

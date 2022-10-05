@@ -1,0 +1,117 @@
+Modif du fichier 
+
+ 
+
+1 – Aspect visuel : 
+
+- Page accueil : 
+
+- titre du document dans l’onglet de la page 
+
+- chevron de fermeture lien page 2 
+
+- footer enorme 
+
+- Page 2 : 
+
+- mauvais cadrage de la page, lien accueil presque disparu de la page 
+
+- formulaire de contact incomplet 
+
+- footer different de page accueil 
+
+ 
+
+ 
+
+2 – Code : 
+
+- Page accueil :  
+
+HEAD 
+
+- ligne 2 langue par default a supprimer le doc est en fr mettre lang=”fr” 
+
+ la valeur default n’est pas valide 
+
+- ligne 5 la balise meta keywords n’a aucun interet pour le referencement 
+
+- ligne 6 la balise meta description sert pour referencement, manque la description de la page 
+
+- ligne 7 la balise meta viewport: viewport-fit=cover est obsolete 
+
+- ligne 8 link rel “shortcut icon” ne fonctionne pas 
+
+- ligne 12 et 13 doivent etre placés avant le link css style 
+
+- ligne 19 et 20 doivent etre placés en bas du body 
+
+- ligne 22 le titre du document doit etre representatif de la page 
+
+ 
+
+BODY 
+
+- indentation a refaire 
+
+BLOC 0 : 
+
+- ligne 41, pas de chevron de fermeture pour balise img  
+
+- ligne 53, li vide  
+
+- ligne 55, &gt est a supprimer 
+
+BLOC 1 : 
+
+- ligne 69, pas de chevron de fermeture pour balise img	 
+
+BLOC 2 :  
+
+- ligne 87, pas de chevron de fermeture pour balise img  
+
+- ligne 127, pas de chevron de fermeture pour balise img 
+
+BLOC 3 : 
+
+BLOC 4 : 
+
+- ligne 157, pas de chevron de fermeture pour balise img  
+
+- ligne 162, pas de chevron de fermeture pour balise img 
+
+- ligne 171, pas de chevron de fermeture pour balise img  
+
+- ligne 182, pas de chevron de fermeture pour balise img 
+
+- ligne 191, pas de chevron de fermeture pour balise img 
+
+BLOC 5 : 
+
+BLOC 8 => Footer 
+
+ 
+
+
+
+- Page 2 : 
+
+- ligne 2 langue par default a supprimer 
+
+- ligne 5 la balise meta keywords n’a aucun interet pour le referencement 
+
+- ligne 6 la balise meta description sert pour referencement, manque la description de la page 
+
+- ligne 7 la balise meta viewport: viewport-fit=cover est obsolete 
+
+- ligne 8 link rel “shortcut icon” ne fonctionne pas 
+
+- ligne 10 le nom du fichier bootstrap ne correspond pas 
+
+- ligne 12 le nom du fichier font-awesome ne correspond pas et doit etre placé au dessus du link css  
+
+- ligne 13 le nom du fichier et-line ne correspond pas et doit etre au dessus du link css style 
+
+- ligne 16 à 18 nom de fichier ne correspond pas et doivent etre mit a la fin du body 
+
+- ligne 19 et 20 doivent etre placés en bas du body 

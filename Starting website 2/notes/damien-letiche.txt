@@ -1,0 +1,35 @@
+site le original https://xicex.fr/ le nom du domaine/page n'est pas = au nom de l'Agence
+
+
+page index
+ligne 2: valeur "default" n'est pas correct pour l'attribue "lang"
+ligne 41 - 162 - 171 - 182 - 191: il n'y a pas de text et balise img fermer
+ligne 69 - 87 - 127 - 157: balise img fermer
+ligne 230 - 235 - 240 - 245: manque du texte
+ligne 8 - shortcut icon
+ligne 40 - 42: mauvaise pratique du css dans le html et en plus c'est la meme classe
+
+
+page 2
+ligne 2: valeur "default" n'est pas correct pour l'attribue "lang"
+ligne 38: il n'y a pas de text et balise img fermer
+ligne 83: l'attribue success-msg et fail-msg n'existe pas
+ligne 88 - 94 - 100: manque [aria-label=""] et balise input fermer
+ligne 123 - 138 - 143 - 153 : manque du texte
+
+
+modif page index
+correction des erreur 
+remplacement du titre par "Agence La Panthère"
+ligne 52: suppr des balise li inutile
+156: du text sur une image
+
+modif page 2
+les link css était mal mis
+67 - 70 modif couleur texte en noir 
+correction des erreur 
+remplacement du titre par "Contact"
+alignement du formulaire
+backgroun hero bar orange supprimé
+css ligne 685 valeur modifier
+

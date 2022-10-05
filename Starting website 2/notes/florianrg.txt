@@ -1,0 +1,117 @@
+
+=========================================index.html=========================================
+1, lang "default" a changer en langue fr (content en Fr)
+
+2, Key word invalid : google, site internet, seo , agence design x100 
+(En rajouter des pertinents)
+
+3, description vide elle doit decrire le site 
+
+4, style.css a positioner en dernier
+
+5, les balises script de preference a la fin
+
+6, title vide a changé (La Panthere - Design de site web)
+
+7, tout les alt qui ne sont pas significatif a changé en fonction de l'image
+
+8, le style dans l'html n'est pas une bonne pratique (Sauf compilé)
+
+9, Links vers des fichiers inexistant (.min) donc certaines library a retirer inutile
+
+10 script vers des fichiers inexistant (.min) donc certaines library a retirer inutile
+
+------------------------bloc 0-----------------
+1, remplacer la  1ere div en header
+
+3, 2x div class keyword , google n'aime pas du tout ça a retirer
+
+4, balise li vide a retirer
+
+5, content de la balise "a" page 2 a changer en contact || contactez nous
+
+6, balise img qui contient seulement du texte a changer en balise p et inserer le content de l'image
+
+------------------------bloc 1-----------------
+1, Remplacer la 1ere div par section
+
+2, balise img qui contient seulement du texte a changer en balise p et inserer le content de l'image
+
+------------------------bloc 2-----------------
+1, tout les br situé en fin de texte a remplacer par du padding || margin
+
+2 balise img qui contient seulement du texte a changer en balise p et inserer le content de l'image
+
+
+------------------------bloc 3-----------------
+1, Remplacer la 1ere div par section
+
+2, la classe l.158 la class black-background qui n'est pas noir comme son nom l'indique, la visibilité du texte n'est pas terrible, changé le background pour un meilleur contraste (en mettant noir par exemp )
+
+
+------------------------bloc 4-----------------
+1, Remplacer la 1ere div par section
+
+2,  tout les alt qui ne sont pas significatif a changé en fonction de l'image
+
+------------------------bloc 5-----------------
+1, Le h2 et l'image background (changé le contraste entre les deux , le texte n'est pas tres visible )
+
+2, Remplacer la 1ere div par footer
+
+3, liens non fonctionnels
+
+4, Changer la font weight pour quelque chose de plus gras et donc plus visible
+
+------------------------Rendu-----------------
+1, police d'ecriture parfois petite a changer ou mettre la possibilité d'augmenter la font size
+
+2, Espacer le footer margin/padding
+
+3, un dark mode serait top
+
+=========================================contact.html=========================================
+
+1, identique a l'index.html 
+
+2, bloc header pas responsive
+
+3, Form : -Label for manquant
+          -Method sur le form
+          -id pas explicit
+          -Le fichier php qui est censé controller le form ne controlle que si le input est vide , or il faut verifier et controller chaque saisie
+
+------------------------Footer-----------------
+
+1, Evenement onclick qui n'enclenche rien 
+2, 1ere div a remplacer par footer
+
+=========================================Arborescence Fichiers=========================================
+
+1, le fichier style.css a mettre dans le dossier css (changer les liens par conséquent)
+
+2, le fichier page2.html a mettre dans un dossier html/views par exemple (changer les liens par conséquent) + changer son nom pour contact (plus explicit)
+
+3, Le Dossier Agence-La-Panthere.zip avant la production a delete
+
+4, le dossier include a renommer en controller + changer le nom de fichier .php en form_contact
+
+5,Dossier img supprimer les img qui ne sont que du texte, renommer les images par pertinence 
+
+6, dossier css supprimer les fichier inutilisé
+
+7, dossier js supprimer les fichier inutilisé
+
+8, dossier font supprimer les fonts inutilisé
+
+
+
+=========================================Fichier=========================================
+
+1, Style.css : -Enormement de classe a delete (inutile)
+               -Beaucoup de classe possédant la meme propriété (Crée une class pour ces propriété la)
+               - retirer les !important inutiles 
+               -Affecter la font family directement soit a une class soit a tout l'html
+
+2, JS : -supprimer les fichiers : gmaps.js
+        -Importer jquery oui mais l'utiliser pour un menu burger et un formhandler qui n'est pas relié.

@@ -1,0 +1,25 @@
+general
+
+    le style.css n'est pas dans le dossier css,
+    organisation des document non mis dans un dossier assets pour les regrouper
+    le fav pas ranger dans un dossier qui lui est propre pour le retrouver ou avec les image
+    semantique de la page qui n'est pas au mieux, utilisation de div au lieux des bonne balise
+
+
+page 1 ( index.html)
+
+    trop de mot clef et des repetition en plus de certain qui ne sont pas pertinent
+    aucune description pour le site
+    les fichier JS devrais etre a la fin de la page,  donc avant la fermeture de la balise body
+    le titre de la page qui est juste un " . "
+    manque de la section main
+
+page 2 ( page2.html)
+
+    le titre devrai etre contact vu que la page sert a cela
+    soucie avec le Css sur la navbar 
+    aucune methode pour le formulaire
+
+
+
+J'arriver pas a trouver vraiment d'erreur et le site me donner envie de tout recommencer de zero surtou
